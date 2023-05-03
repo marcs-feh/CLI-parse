@@ -1,5 +1,5 @@
 def cli_parse(args : list[str]):
-  flags = {}
+  flags = []
   regular = []
 
   is_flag = lambda s: s[0] == '-' and len(s) > 1
@@ -14,7 +14,7 @@ def cli_parse(args : list[str]):
   for arg in args:
     if is_flag(arg):
       k, v = split_flag(arg)
-      flags[k] = v
+      flags.append((k,v))
     else:
       regular.append(arg)
 
