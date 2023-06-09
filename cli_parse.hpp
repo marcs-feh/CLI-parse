@@ -2,8 +2,6 @@
 #include <vector>
 #include <utility>
 
-#include <iostream>
-
 namespace cli {
 using std::pair;
 using std::vector;
@@ -32,10 +30,8 @@ cli_parse(const vector<string>& args){
 
 	for(auto&& arg : args){
 		if(is_flag(arg)){
-			std::cout << "'tis a flag: " << arg << '\n';
 			flags.push_back(split_flag(arg));
 		} else {
-			std::cout << "'tis NOT a flag: " << arg << '\n';
 			regular.push_back(arg);
 		}
 	}
