@@ -15,7 +15,7 @@ M.cli_parse = function (arg_list)
 		if not p then
 			flag = {s:sub(2, p), true}
 		else
-			flag = {s:sub(2, p), s:sub(p+1, #s)}
+			flag = {s:sub(2, p-1), s:sub(p+1, #s)}
 		end
 		return flag
 	end

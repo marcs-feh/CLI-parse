@@ -6,7 +6,7 @@ consistent and easy to parse visually and with software, but not many people
 use it (most notable usage I know of is the Odin language compiler).
 
 All functions follow the same structure of returning 2 lists, one containing
-pairs the flags and their values (or and empty string/`true` for lonely flags)
+pairs the flags and their values (or an empty string/`true` for lonely/toggle flags)
 and the other returns the non-flag arguments. Both lists are in the same order
 as provided to the function
 
